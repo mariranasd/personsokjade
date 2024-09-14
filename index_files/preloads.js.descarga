@@ -1,0 +1,72 @@
+
+    (function() {
+      var baseURL = "https://cdn.shopify.com/shopifycloud/checkout-web/assets/";
+      var scripts = ["https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/polyfills.CaHplocw.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/app.5kLysu-p.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/VaultedContact.DCmxBLNv.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/DeliveryMethodSelectorSection.CsuXGzXN.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/PurchaseOptionsAgreement.B85AzulH.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/VaultedDeliveryAddress.DvZOcz6S.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/Rollup.5iK9_3aK.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/useUnauthenticatedErrorModal.CnPe9jCh.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/ShopPayLogo.BxApkWFv.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/Option.BVQcWOOJ.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/PickupPointCarrierLogo.BxIYXzhs.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/hooks.pmaXY5Rq.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/LegacyVaultedShippingMethods.BknUJAS3.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/OnePageModal.C5jXmYkH.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/useSessionExchange.BLlQbuKp.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/useGetUlcFrameUri.C0d5fe2e.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/useShowShopPayOptin.C5eYDzWO.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/Section.DDHWTtMm.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/google-pay.C96a1vxn.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/PayButtonSection.DCv9Thic.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/context.DmJYLH0F.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/DutyOptions.BiTaWzlB.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/SubscriptionPriceBreakdown.r8Rs2nPD.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/StockProblemsLineItemList.Dfme8-We.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/component-ShopPayVerificationSwitch.sRv4otdd.js"];
+      var styles = ["https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/app.DcM1B2YE.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/VaultedContact.CxMuAABI.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/DeliveryMethodSelectorSection.7LYaNSSo.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/Rollup.o9Mx-fKL.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/useUnauthenticatedErrorModal.DnkQ4tsk.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/ShopPayLogo.D_HPU8Dh.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/Option.BgrbqXV7.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/PickupPointCarrierLogo.C0wRU6wV.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/LegacyVaultedShippingMethods.CtgoyLeD.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/Section.sQehCocD.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/google-pay.D-Ox6Dnf.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/PayButtonSection.DF7trkKf.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/DutyOptions.Bd1Z60K2.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/SubscriptionPriceBreakdown.Bqs0s4oM.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/StockProblemsLineItemList.CxdIQKjw.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.es/assets/ShopPayVerificationSwitch.CAxiAssW.css"];
+      var fontPreconnectUrls = [];
+      var fontPrefetchUrls = [];
+      var imgPrefetchUrls = ["https://cdn.shopify.com/s/files/1/0718/3787/6501/files/LOGO_SALONSEBASTIAN_GRANDE_a596e459-91f8-4a95-9ebc-240150e170c7_x320.jpg?v=1676322187"];
+
+      function preconnect(url, callback) {
+        var link = document.createElement('link');
+        link.rel = 'dns-prefetch preconnect';
+        link.href = url;
+        link.crossOrigin = '';
+        link.onload = link.onerror = callback;
+        document.head.appendChild(link);
+      }
+
+      function preconnectAssets() {
+        var resources = [baseURL].concat(fontPreconnectUrls);
+        var index = 0;
+        (function next() {
+          var res = resources[index++];
+          if (res) preconnect(res, next);
+        })();
+      }
+
+      function prefetch(url, as, callback) {
+        var link = document.createElement('link');
+        if (link.relList.supports('prefetch')) {
+          link.rel = 'prefetch';
+          link.fetchPriority = 'low';
+          link.as = as;
+          if (as === 'font') link.type = 'font/woff2';
+          link.href = url;
+          link.crossOrigin = '';
+          link.onload = link.onerror = callback;
+          document.head.appendChild(link);
+        } else {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', url, true);
+          xhr.onloadend = callback;
+          xhr.send();
+        }
+      }
+
+      function prefetchAssets() {
+        var resources = [].concat(
+          scripts.map(function(url) { return [url, 'script']; }),
+          styles.map(function(url) { return [url, 'style']; }),
+          fontPrefetchUrls.map(function(url) { return [url, 'font']; }),
+          imgPrefetchUrls.map(function(url) { return [url, 'image']; })
+        );
+        var index = 0;
+        (function next() {
+          var res = resources[index++];
+          if (res) prefetch(res[0], res[1], next);
+        })();
+      }
+
+      function onLoaded() {
+        preconnectAssets();
+        prefetchAssets();
+      }
+
+      if (document.readyState === 'complete') {
+        onLoaded();
+      } else {
+        addEventListener('load', onLoaded);
+      }
+    })();
+  
